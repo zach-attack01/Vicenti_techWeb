@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services | VCT Technologies</title>
+<meta name="description" content="Managed security services for small businesses — M365, endpoint protection, NIST compliance, network security, incident response, and IT support.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Barlow:wght@300;400;500;600&family=Barlow+Condensed:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+/* SERVICES PAGE ONLY */
+.svc-list{border-top:1px solid var(--border)}
+.svc-row{display:grid;grid-template-columns:55px 1fr 1.8fr auto;align-items:center;gap:2rem;padding:1.75rem 0;border-bottom:1px solid var(--border);transition:padding-left .2s}
+.svc-row:hover{padding-left:.75rem}
+.svc-row:hover .svc-n{color:var(--gold)}
+.svc-n{font-family:var(--cond);font-size:.7rem;font-weight:600;letter-spacing:.1em;color:var(--dim);transition:color .2s}
+.svc-name{font-family:var(--serif);font-size:1.3rem;font-weight:600;color:var(--text);line-height:1.2}
+.svc-desc{font-size:.875rem;font-weight:300;color:var(--muted);line-height:1.75}
+.svc-tag{font-family:var(--cond);font-size:.62rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);border:1px solid var(--gold-border);padding:4px 10px;border-radius:2px;white-space:nowrap}
+
+.process{background:var(--bg2);border-top:1px solid var(--border)}
+.process-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--border);margin-top:0}
+.process-step{padding:2rem;border-right:1px solid var(--border);position:relative}
+.process-step:last-child{border-right:none}
+.process-step-num{font-family:var(--cond);font-size:2.5rem;font-weight:700;color:rgba(201,168,76,.15);line-height:1;margin-bottom:1rem;letter-spacing:-.02em}
+.process-step h3{font-family:var(--serif);font-size:1.1rem;font-weight:600;color:var(--text);margin-bottom:.5rem}
+.process-step p{font-size:.825rem;font-weight:300;color:var(--muted);line-height:1.75}
+
+.cta-strip{background:var(--bg3);border-top:1px solid var(--gold-border);border-bottom:1px solid var(--gold-border);padding:60px 3rem}
+.cta-strip-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap}
+.cta-strip h2{font-family:var(--serif);font-size:clamp(1.5rem,3vw,2.25rem);font-weight:400;line-height:1.2}
+.cta-strip h2 strong{font-weight:700}
+
+@media(max-width:900px){
+  .svc-row{grid-template-columns:40px 1fr;gap:1rem}
+  .svc-desc,.svc-tag{display:none}
+  .process-steps{grid-template-columns:1fr 1fr}
+  .process-step:nth-child(2){border-right:none}
+  .process-step:nth-child(3){border-top:1px solid var(--border);border-right:1px solid var(--border)}
+  .process-step:nth-child(4){border-top:1px solid var(--border)}
+  .cta-strip-inner{flex-direction:column;align-items:flex-start}
+}
+@media(max-width:580px){
+  .process-steps{grid-template-columns:1fr}
+  .process-step{border-right:none !important;border-bottom:1px solid var(--border)}
+  .process-step:last-child{border-bottom:none}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">VCT <em>Technologies</em></a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="about.html">About &amp; Team</a></li>
+    <li><a href="contact.html" class="nav-cta">Free Assessment</a></li>
+  </ul>
+  <button class="mob-btn" id="mobBtn" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-inner">
+    <div class="page-eyebrow"><span class="page-eyebrow-line"></span><span class="page-eyebrow-text">What We Offer</span></div>
+    <h1>Managed Security <strong>Services</strong></h1>
+    <p class="page-hero-sub">Enterprise-level protection and IT management — built for small businesses that need real security without enterprise overhead.</p>
+  </div>
+</div>
+
+<section>
+  <div class="inner">
+    <div class="s-head fi">
+      <div class="s-head-left"><div class="s-num">01</div></div>
+      <div><h2 class="s-title">Core <strong>Services</strong></h2><p class="s-sub">Everything you need to stay protected, compliant, and running smoothly.</p></div>
+    </div>
+    <div class="svc-list fi">
+      <div class="svc-row">
+        <div class="svc-n">01</div>
+        <div class="svc-name">Microsoft 365 Security &amp; Management</div>
+        <div class="svc-desc">Full M365 tenant management — Entra ID, Intune, Conditional Access policies, audit logging, and license optimization. Built from scratch or taken over from your current state.</div>
+        <div class="svc-tag">Entra · Intune</div>
+      </div>
+      <div class="svc-row">
+        <div class="svc-n">02</div>
+        <div class="svc-name">Endpoint Protection &amp; Device Management</div>
+        <div class="svc-desc">Every device in your organization locked down, patched, and monitored. Deployed remotely with zero disruption to your day-to-day operations.</div>
+        <div class="svc-tag">MDM · Windows</div>
+      </div>
+      <div class="svc-row">
+        <div class="svc-n">03</div>
+        <div class="svc-name">Compliance &amp; Risk Assessment</div>
+        <div class="svc-desc">NIST Cybersecurity Framework assessments, FERPA data handling reviews, and plain-English risk reports that tell you exactly what to fix and in what order.</div>
+        <div class="svc-tag">NIST · FERPA</div>
+      </div>
+      <div class="svc-row">
+        <div class="svc-n">04</div>
+        <div class="svc-name">Network Security &amp; Firewall Management</div>
+        <div class="svc-desc">Fortinet FortiGate deployment and management, VLAN configuration, remote access setup, and ongoing monitoring across single and multi-site environments.</div>
+        <div class="svc-tag">FortiGate · VLAN</div>
+      </div>
+      <div class="svc-row">
+        <div class="svc-n">05</div>
+        <div class="svc-name">Incident Response</div>
+        <div class="svc-desc">Fast, decisive response when something goes wrong. Identification, containment, recovery, and a post-incident report so it doesn't happen again.</div>
+        <div class="svc-tag">IR · Recovery</div>
+      </div>
+      <div class="svc-row">
+        <div class="svc-n">06</div>
+        <div class="svc-name">Ongoing IT Support &amp; Help Desk</div>
+        <div class="svc-desc">Day-to-day IT handled without drama. Remote and on-site support across the Twin Cities metro for your team, hardware, and software needs.</div>
+        <div class="svc-tag">Remote · On-Site</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="process">
+  <div class="inner">
+    <div class="s-head fi">
+      <div class="s-head-left"><div class="s-num">02</div></div>
+      <div><h2 class="s-title">How It <strong>Works</strong></h2><p class="s-sub">A straightforward onboarding process designed to get you protected fast with no disruption.</p></div>
+    </div>
+    <div class="process-steps fi">
+      <div class="process-step">
+        <div class="process-step-num">01</div>
+        <h3>Free Assessment</h3>
+        <p>30-minute remote review of your current environment. We identify gaps, risks, and quick wins — no sales pitch, just findings.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-step-num">02</div>
+        <h3>Tailored Proposal</h3>
+        <p>A plain-English service proposal matched to your actual risk profile and budget. You'll know exactly what you're getting and what it costs.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-step-num">03</div>
+        <h3>Onboarding</h3>
+        <p>We handle setup remotely with minimal disruption. Most clients are fully onboarded within 1–2 weeks depending on scope.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-step-num">04</div>
+        <h3>Ongoing Management</h3>
+        <p>Monthly reporting, proactive monitoring, and direct access to your dedicated contact. We stay ahead of threats so you don't have to think about them.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-strip fi">
+  <div class="cta-strip-inner">
+    <h2>Ready to get started?<br><strong>Your free assessment is waiting.</strong></h2>
+    <a href="contact.html" class="btn-gold">Schedule Now
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </div>
+</div>
+
+<footer>
+  <div class="foot">
+    <a href="index.html" class="foot-logo">VCT <em>Technologies</em></a>
+    <ul class="foot-links">
+      <li><a href="services.html">Services</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="foot-right">
+      <p class="foot-copy">© 2025 VCT Technologies LLC · <a href="https://vicenti.tech" style="color:var(--dim);text-decoration:none">vicenti.tech</a></p>
+      <p class="foot-ownership">Native American &amp; Woman-Owned · Blaine, MN</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
