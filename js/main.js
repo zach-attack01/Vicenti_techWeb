@@ -42,8 +42,16 @@ function initPhoto(imgId, phId) {
   const img = document.getElementById(imgId);
   const ph = document.getElementById(phId);
   if (!img || !ph) return;
-  img.onload = () => { img.style.display = 'block'; ph.style.display = 'none'; };
-  img.onerror = () => { img.style.display = 'none'; ph.style.display = 'flex'; };
+  // If the image is already loaded from cache, handle immediately
+  const handleLoaded = () => { img.style.display = 'block'; ph.style.display = 'none'; };
+  const handleError = () => { img.style.display = 'none'; ph.style.display = 'flex'; };
+  if (img.complete) {
+    // naturalWidth > 0 indicates a successful load
+    if (img.naturalWidth && img.naturalWidth > 0) handleLoaded(); else handleError();
+  } else {
+    img.onload = handleLoaded;
+    img.onerror = handleError;
+  }
 }
 
 // Contact form (Formspree AJAX)
