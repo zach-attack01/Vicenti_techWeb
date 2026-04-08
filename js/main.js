@@ -3,7 +3,7 @@ const footerEl = document.querySelector('footer');
 if (footerEl) {
   footerEl.innerHTML = `
     <div class="foot">
-      <a href="index.html" class="foot-logo"><img src="Vicenti_Logo.png" alt="V¢T Technologies" style="height:44px;width:auto;vertical-align:middle;"></a>
+      <a href="index.html" class="foot-logo"><img src="Vicenti_Logo.png" alt="V¢T Technologies" style="height:66px;width:auto;vertical-align:middle;"></a>
       <ul class="foot-links">
         <li><a href="services.html">Services</a></li>
         <li><a href="about.html">About</a></li>
