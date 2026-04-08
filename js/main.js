@@ -1,3 +1,21 @@
+// Centralized footer
+const footerEl = document.querySelector('footer');
+if (footerEl) {
+  footerEl.innerHTML = `
+    <div class="foot">
+      <a href="index.html" class="foot-logo"><img src="Vicenti_Logo.png" alt="V¢T Technologies" style="height:44px;width:auto;vertical-align:middle;"></a>
+      <ul class="foot-links">
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="foot-right">
+        <p class="foot-copy">© 2026 V¢T Technologies LLC · <a href="https://vicenti.tech" style="color:var(--dim);text-decoration:none">vicenti.tech</a></p>
+        <p class="foot-ownership">Native American &amp; Woman-Owned · Coon Rapids, MN</p>
+      </div>
+    </div>`;
+}
+
 // Mobile nav
 const mobBtn = document.getElementById('mobBtn');
 const navLinks = document.getElementById('navLinks');
